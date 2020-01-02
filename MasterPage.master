@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="jQuery/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Karla:700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Mada" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="css/noramlize.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <link rel="shortcut icon" href="Images/mountain_brand_logo_container.ico" type="image/x-icon" />
+    <title>Mountie</title>
+    <link href="css/MasterPage.css" rel="stylesheet" />
+    <script src="javascript/MasterPage.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="window.scroll(0, <%=scroll %>)">
+    <center>
+        <nav>
+            <ul class="topnav">
+                <li class="brand_logo_container">
+                        <span class="brand" onclick="location.href='About.aspx'">spoc</span>
+                </li>
+                        <li><a class="center" href="Shop.aspx">SHOP</a></li>
+                        <li><a class="center" href="About.aspx">ABOUT</a></li>
+                        <li><a class="center" href="About.aspx?contact=1">CONTACT</a></li>
+                <%=shoppingCart %>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown_btn"><%=name %></a>
+                    <div class="dropdown-content">
+                        <br />
+                        <%=admin %>
+                        <br />
+                        <%=log %>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </center>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <footer style="height: 200px; background-color: #2B2B2B; width: 100%; margin-top: -200px; position: absolute; bottom: 0px;">
+        <span class="extraInfo">You Are Visiter number&nbsp; <%=counter %></span>
+    </footer>
+</body>
+</html>

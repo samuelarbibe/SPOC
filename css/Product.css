@@ -1,0 +1,180 @@
+﻿body {
+    background-color: white;
+}
+
+.wrapper {
+    width: 90%;
+    height: 1000px;
+    margin-top: 100px;
+    background-color: #fff;
+}
+
+.left_container {
+    height: 950px;
+    width: 30%;
+    background-color: #fff;
+    float: left;
+}
+
+.product_name {
+    font-family: "Karla";
+    width: 100%;
+    height: 110px;
+    background-color: #fff;
+    padding-top: 15px;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #2f2f2f;
+    font-weight: 300;
+}
+
+h3 {
+    color: #828282;
+}
+
+.overview {
+    font-family: "Mada";
+    margin-top: 100px;
+    color: #818181;
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.extra {
+    margin-top: 200px;
+    text-align: left;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+h6 {
+    font-family: 'hard';
+    letter-spacing: 4px;
+    color: #afafaf;
+}
+
+.selection {
+    width: 200px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+    .selection select {
+        padding: 5px 8px;
+        width: 130%;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        background-image: none;
+    }
+
+button {
+    color: red;
+    background: transparent;
+    border: 0px;
+    padding: 20px;
+    padding-left: 30px;
+    font-family: 'hard';
+    letter-spacing: 4px;
+    transition: 0.4s;
+}
+
+    button:hover {
+        cursor: grab;
+        background-color: #f1f1f1;
+    }
+
+img {
+    float: right;
+    width: 60%;
+    margin-top: 100px;
+    max-width: 1500px;
+}
+
+.info_wrapper {
+    margin-top: 0px;
+    width: 100%;
+    height: 1200px;
+    background-color: #282828;
+}
+
+table {
+    padding-top: 200px;
+}
+
+    table td {
+        padding-top: 30px;
+    }
+
+        table td:nth-child(odd) {
+            font-family: 'hard';
+            font-size: 10px;
+            color: #767676;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        table td:nth-child(even) {
+            padding-left: 50px;
+            font-family: "Mada";
+            color: white;
+        }
+
+.price {
+    font-family: "Mada";
+}
+
+
+#snackbar {
+    visibility: hidden;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+}
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 9.5s;
+        animation: fadein 0.5s, fadeout 0.5s 9.5s;
+    }
+
+    #snackbar a {
+        color: #a7a7a7;
+    }
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

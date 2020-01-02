@@ -1,0 +1,28 @@
+CREATE TABLE [dbo].[Products]
+(
+    [Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, 
+    [Image] NVARCHAR(100) NULL, 
+    [ModelName] NVARCHAR(20) NULL, 
+    [CompanyName] NVARCHAR(20) NULL, 
+    [Price] INT NULL, 
+    [Date] INT NULL, 
+    [Type] NVARCHAR(20) NULL, 
+    [Weight] INT NULL
+);
+
+
+CREATE TABLE [dbo].[Users] (
+    [Id]             INT           NOT NULL,
+    [Username]       VARCHAR (20)  NOT NULL,
+    [Admin]          TINYINT       NULL,
+    [Password]       NCHAR (10)    NULL,
+    [City]           INT           NULL,
+    [Age]            INT           NULL,
+    [Gender]         VARCHAR (10)  NULL,
+    [ProfilePicture] NVARCHAR (50) NULL,
+    [Registration]   DATETIME      NULL,
+    [PhoneNumber]    NCHAR (20)    NULL,
+    [XP]             INT           NULL,
+    [Email]          NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Username] ASC)
+);
